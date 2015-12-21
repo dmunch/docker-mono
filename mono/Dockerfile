@@ -6,7 +6,7 @@ RUN echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo t
 
 RUN apt-get update  && \
     apt-get install -y mono-devel mono-mcs libtool autoconf g++ gettext make git  && \ 
-    git clone https://github.com/mono/mono --branch mono-4.2.0-branch --single-branch && \
+    git clone https://github.com/dmunch/mono --branch openxml-fixes-4.2 --single-branch && \
     cd mono && \
     ./autogen.sh   --prefix /opt/mono --with-ikvm-native=no && \
     make -j 4 && \
