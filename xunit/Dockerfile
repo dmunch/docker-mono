@@ -15,5 +15,5 @@ RUN mono NuGet.exe install xunit.runner.console
 WORKDIR /src
 
 #would be better to create an alias
-RUN echo "mono /usr/local/share/mono/xunit.runner.console.2.1.0/tools/xunit.console.x86.exe \$1" > /usr/local/bin/xunit
+RUN echo "mono /usr/local/share/mono/xunit.runner.console.2.1.0/tools/xunit.console.x86.exe \"\$@\"" > /usr/local/bin/xunit
 RUN chmod +x /usr/local/bin/xunit
